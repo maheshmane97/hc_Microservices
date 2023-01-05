@@ -28,7 +28,7 @@ public class UserService {
 
 		Department department = restTemplate.getForObject("http://DEPARTMENT-SERVICE/dept?dept_Id=" + user.getDept_Id(),
 				Department.class);
-
+		
 		vo.setUser(user);
 		vo.setDepartment(department);
 

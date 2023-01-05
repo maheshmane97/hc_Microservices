@@ -1,12 +1,17 @@
 spring:
   application:
-    name: DEPARTMENT-SERVICE 
+    name: DEPARTMENT-SERVICE
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:9094 
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    serviceUrl:
-         defaultZone: http://localhost:8761/eureka
-  instance:
-    hostname: localhost
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    serviceUrl:
+#         defaultZone: http://localhost:8761/eureka
+#  instance:
+#    hostname: localhost
+# bcx we posted configuration on github

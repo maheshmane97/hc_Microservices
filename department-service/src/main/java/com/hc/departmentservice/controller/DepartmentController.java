@@ -14,17 +14,17 @@ import com.hc.departmentservice.service.DepartmentService;
 @RestController
 @RequestMapping("/dept")
 public class DepartmentController {
-	
-	@Autowired
-	DepartmentService departmentService;
-	
-	@PostMapping
-	public Department saveDept(@RequestBody Department department) {
-		return departmentService.saveDept(department);
-	}
-	
-	@GetMapping
-	public Department getById(@RequestParam("dept_Id") Integer dept_Id) {
-		return departmentService.getByID(dept_Id);
-	}
+
+    @Autowired
+    DepartmentService departmentService;
+
+    @PostMapping
+    public Department saveDept(@RequestBody Department department) {
+        return departmentService.saveDept(department);
+    }
+
+    @GetMapping
+    public Department getById(@RequestParam("dept_Id") Integer dept_Id) {
+        return departmentService.getByID(dept_Id);
+    }
 }
