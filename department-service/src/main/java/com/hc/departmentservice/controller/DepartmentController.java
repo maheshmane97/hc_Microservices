@@ -11,8 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.hc.departmentservice.entity.Department;
 import com.hc.departmentservice.service.DepartmentService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/dept")
+@Slf4j
 public class DepartmentController {
 
     @Autowired
@@ -20,11 +23,13 @@ public class DepartmentController {
 
     @PostMapping
     public Department saveDept(@RequestBody Department department) {
+    	log.debug("Inside save Department Controller");
         return departmentService.saveDept(department);
     }
 
     @GetMapping
     public Department getById(@RequestParam("dept_Id") Integer dept_Id) {
+    	log.debug("Inside get Department Controller");
         return departmentService.getByID(dept_Id);
     }
 }
